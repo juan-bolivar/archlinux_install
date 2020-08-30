@@ -27,11 +27,11 @@ mkdir /home/$2/.config/sxhkd
 mkdir /home/$2/.newsboat/
 
 
-cp    /home/$2/scripts/config/sxhkdrc         /home/$2/.config/sxhkd/sxhkdrc
-cat   /home/$2/scripts/config/.xprofile   >>  /home/$2/.xprofile
-cp    /home/$2/scripts/config/dwm.desktop     /usr/share/xsessions/dwm.desktop
-cp    /home/$2/scripts/config/config          /home/$2/.newsboat/config
-cp    /home/$2/scripts/config/urls            /home/$2/.newsboat/urls
+sudo cp    /home/$2/scripts/config/sxhkdrc         /home/$2/.config/sxhkd/sxhkdrc
+sudo cat   /home/$2/scripts/config/.xprofile   >>  /home/$2/.xprofile
+sudo cp    /home/$2/scripts/config/dwm.desktop     /usr/share/xsessions/dwm.desktop
+sudo cp    /home/$2/scripts/config/config          /home/$2/.newsboat/config
+sudo cp    /home/$2/scripts/config/urls            /home/$2/.newsboat/urls
 
 
 
