@@ -41,4 +41,4 @@ chown $2 /home/$2/scripts/helpers
 
 
 cd $HOME             && git clone https://aur.archlinux.org/transset-df.git
-cd $HOME/transset-df && su $2 -c "makepkg -si"
+cd $HOME/transset-df && makepkg -si
