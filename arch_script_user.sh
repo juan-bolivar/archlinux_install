@@ -6,7 +6,7 @@ sudo pacman -S textlive-most wget                                               
 
 sudo ufw enable    ## firewall enabled
 
-
+sudo systemctl enable ufw 
 sudo systemctl enable lightdm.service
 
 cd /home/$2 && mkdir scripts   && git clone https://github.com/juan-bolivar/custom_scripts.git /home/$2/scripts
