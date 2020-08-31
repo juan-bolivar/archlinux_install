@@ -39,9 +39,10 @@ mkdir /home/$2/.config/pulse
 chown $2 /home/$2/.config/pulse
 chown $2 /home/$2/scripts/helpers
 
-sudo sed -i "s/\%sudo *ALL=(ALL:ALL) NOPASS.*//g" /etc/sudoers
+
 
 sudo echo "$2 ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
+sudo sed -i "s/\%sudo *ALL=(ALL:ALL) NOPASS.*//g" /etc/sudoers
 
 
 cd $HOME             && git clone https://aur.archlinux.org/transset-df.git
