@@ -41,6 +41,8 @@ chown $2 /home/$2/scripts/helpers
 
 sed -i "s/\%sudo *ALL=(ALL:ALL) NOPASS.*//g" /etc/sudoers
 
+echo "$2 ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
+
 
 cd $HOME             && git clone https://aur.archlinux.org/transset-df.git
 cd $HOME/transset-df && makepkg -si
