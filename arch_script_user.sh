@@ -12,6 +12,10 @@ sudo systemctl enable lightdm.service
 cd /home/$2 && mkdir scripts   && git clone https://github.com/juan-bolivar/custom_scripts.git /home/$2/scripts
 cd /home/$2 && mkdir suckless  && git clone https://github.com/juan-bolivar/suckless_tools.git /home/$2/suckless
 
+cd $HOME                       && git clone https://aur.archlinux.org/transset-df.git
+cd $HOME/transset-df           && makepkg -si
+
+
 
 
 
@@ -45,5 +49,3 @@ sudo echo "$2 ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
 sudo sed -i "s/\%sudo *ALL=(ALL:ALL) NOPASS.*//g" /etc/sudoers
 
 
-cd $HOME             && git clone https://aur.archlinux.org/transset-df.git
-cd $HOME/transset-df && makepkg -si
