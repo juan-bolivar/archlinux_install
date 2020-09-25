@@ -6,6 +6,13 @@ read -p 'Ingresar clave de usuario : ' clave
 
 read -p 'Ingresar clave de usuario root : ' root 
 
+size_disk=$(fdisk -l | grep Disk | head -n 1 | cut -d ',' -f2 | cut -d' ' -f2)
+
+
+size_root=expr $size_disk / 1024 / 1024 / 1024 / 5
+size_root_adj=$(($size_root < 4 ? 3 : $size_root))
+size_swap=$(vmstat -s | grep 'total memory' | awk '{print $1/1024/1024}')
+
 sgdisk --zap-all $dev
 
 (echo n
@@ -17,12 +24,12 @@ echo n
 echo p
 echo 
 echo 
-echo +30G
+echo +"$size_root"G
 echo n
 echo p
 echo 
 echo 
-echo +8G
+echo +"$size_swap"G
 echo n
 echo p
 echo 
