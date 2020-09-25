@@ -10,7 +10,7 @@ size_disk=$(fdisk -l | grep Disk | head -n 1 | cut -d ' ' -f3 | cut -d' ' -f1 | 
 
 
 size_root=expr $size_disk / 5
-size_root_adj=$(($size_root < 4 ? 3 : $size_root))
+size_root_adj=$((size_root < 4 ? 3 : size_root))
 size_swap=$(vmstat -s | grep 'total memory' | awk '{print $1/1024/1024}')
 
 sgdisk --zap-all $dev
