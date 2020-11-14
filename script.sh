@@ -38,8 +38,8 @@ echo w
 ) | fdisk $dev
 
 #make filesystem
+mkfs.fat -F32 "$dev"1
 mkfs.ext4 "$dev"1
-mkfs.fat -F32 "$dev"2
 mkfs.ext4 "$dev"4
 
 #make swap
