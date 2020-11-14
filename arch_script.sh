@@ -5,7 +5,7 @@ pacman -S linux linux-firmware --noconfirm
 
 pacman -S grub --noconfirm
 
-grub-install --target=x86_64-efi $1
+grub-install --target=x86_64-efi --efi-diretory=/boot --bootloader-id=grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
