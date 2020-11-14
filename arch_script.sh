@@ -5,9 +5,24 @@ pacman -S linux linux-firmware --noconfirm
 
 pacman -S grub --noconfirm
 
-grub-install --target=x86_64-efi --efi-diretory=/boot --bootloader-id=grub
+bootctl --path=/boot install
 
-grub-mkconfig -o /boot/grub/grub.cfg
+
+echo 'default arch\n timeout 3\n editor 0' > /boot/loader/loader.conf
+
+
+echo "
+title Archlinux
+linux /vmlinuz-linux
+initrd /initramfs-linux.img
+options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/sda6) rw
+" > /boot/loader/entries/arch.conf
+
+
+
+#grub-install --target=x86_64-efi --efi-diretory=/boot --bootloader-id=grub
+
+#grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S networkmanager --noconfirm
 
