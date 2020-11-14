@@ -5,7 +5,7 @@ pacman -S linux linux-firmware --noconfirm
 
 pacman -S grub --noconfirm
 
-grub-install --target=i386-pc $1
+grub-install --target=x86_64-efi $1
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
