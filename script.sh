@@ -38,7 +38,8 @@ echo w
 ) | fdisk $dev
 
 
-( echo a
+( echo t
+  echo 1
   echo 1
   echo w) | fdisk $dev
 
