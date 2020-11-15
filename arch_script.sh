@@ -19,11 +19,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 mkdir /boot/loader
 mkdir /boot/loader/entries
 
+temp="$1"1
 echo "
 title Archlinux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options root=PARTUUID=$(blkid -s PARTUUID -o value $1 ) rw
+options root=PARTUUID=$(blkid -s PARTUUID -o value $temp ) rw
 " > /boot/loader/entries/arch.conf
 
 
