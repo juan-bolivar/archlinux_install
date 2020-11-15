@@ -64,7 +64,7 @@ mount "$dev"1 /mnt/boot
 mount "$dev"4 /mnt/home
 
 
-pacstrap /mnt base base-devel emacs vim 
+pacstrap /mnt base base-devel emacs vim linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
