@@ -37,6 +37,11 @@ echo
 echo w
 ) | fdisk $dev
 
+
+( echo a
+  echo 1
+  echo w) | fisk $dev
+
 #make filesystem
 mkfs.fat -F32 "$dev"1
 mkfs.ext4 "$dev"2
