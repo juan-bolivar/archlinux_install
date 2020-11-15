@@ -16,6 +16,8 @@ grub-install --target=x86_64-efi --efi-diretory=/boot --bootloader-id=grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
+mkdir /boot/loader/entries
+
 echo "
 title Archlinux
 linux /vmlinuz-linux
