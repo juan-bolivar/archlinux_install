@@ -12,10 +12,11 @@ pacman -S efibootmgr --noconfirm
 #echo 'default arch\n timeout 3\n editor 0' > /boot/loader/loader.conf
 
 
-grub-install --target=x86_64-efi --efi-diretory=/boot --bootloader-id=grub
+grub-install --target=x86_64-efi --efi-diretory=/boot --bootloader-id=grub-uefi
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
+mkdir /boot/loader
 mkdir /boot/loader/entries
 
 echo "
