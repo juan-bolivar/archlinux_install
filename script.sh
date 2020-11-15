@@ -40,7 +40,7 @@ echo w
 
 ( echo a
   echo 1
-  echo w) | fisk $dev
+  echo w) | fdisk $dev
 
 #make filesystem
 mkfs.fat -F32 "$dev"1
