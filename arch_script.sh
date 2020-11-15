@@ -4,6 +4,7 @@
 pacman -S linux linux-firmware --noconfirm
 
 pacman -S grub --noconfirm
+pacman -S efibootmgr --noconfirm
 
 #bootctl --path=/boot install
 
