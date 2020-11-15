@@ -62,5 +62,5 @@ echo "%sudo   ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 #sed -i "s/root ALL=.*/Cmnd_Alias   TESTCOMM = \/bin\/bash\nroot    ALL=(ALL:ALL) ALL\n%admin  ALL=(ALL) ALL\n%sudo   ALL=(ALL:ALL) ALL\n$2    ALL=NOPASSWD:TESTCOMM/g" /etc/sudoers
 
 
-sudo -i -u $2 bash /arch_script_user.sh $1 $2 $3
+#sudo -i -u $2 bash /arch_script_user.sh $1 $2 $3
 
