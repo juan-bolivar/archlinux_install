@@ -19,10 +19,8 @@ echo "
 title Archlinux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options root=PARTUUID=$(blkid -s PARTUUID -o value ) rw
+options root=PARTUUID=$(blkid -s PARTUUID -o value $1 ) rw
 " > /boot/loader/entries/arch.conf
-
-
 
 
 
