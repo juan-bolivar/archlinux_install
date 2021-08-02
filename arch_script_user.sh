@@ -3,7 +3,7 @@ sudo pacman -S noto-fonts xorg xfce4 pulseaudio lightdm-gtk-greeter  vi vim     
 sudo pacman -S network-manager-applet git openssh thunderbird firefox pavucontrol --noconfirm
 sudo pacman -S dmenu elinks feh xcompmgr sxhkd acpi newsboat mpv  mupdf           --noconfirm
 sudo pacman -S textlive-most wget youtube-dl                                      --noconfirm
-sudo pacman -S ansible                                                            --noconfirm
+sudo pacman -S ansible  brightnessctl                                             --noconfirm
 
 sudo ufw enable    ## firewall enabled
 
