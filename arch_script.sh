@@ -16,7 +16,9 @@ mkdir /boot/EFI
 
 mount "$1"1 /boot/EFI
 
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub_uefi
+grub-install --target=i386-pc $1
+
+#grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub_uefi
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
