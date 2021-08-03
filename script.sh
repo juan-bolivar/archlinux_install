@@ -68,8 +68,8 @@ pacstrap /mnt base base-devel emacs vim linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-curl https://raw.githubusercontent.com/juan-bolivar/archlinux_install/master/arch_script.sh > /mnt/arch_script.sh
-curl https://raw.githubusercontent.com/juan-bolivar/archlinux_install/master/arch_script_user.sh > /mnt/arch_script_user.sh
+curl https://raw.githubusercontent.com/juan-bolivar/archlinux_install/BIOS/arch_script.sh > /mnt/arch_script.sh
+curl https://raw.githubusercontent.com/juan-bolivar/archlinux_install/BIOS/arch_script_user.sh > /mnt/arch_script_user.sh
 
 arch-chroot /mnt bash ./arch_script.sh $dev $user $clave $root
 
