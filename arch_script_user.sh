@@ -10,8 +10,13 @@ sudo ufw enable    ## firewall enabled
 sudo systemctl enable ufw 
 sudo systemctl enable lightdm.service
 
-cd /home/$2 && mkdir scripts   && git clone https://github.com/juan-bolivar/custom_scripts.git /home/$2/scripts
-cd /home/$2 && mkdir suckless  && git clone https://github.com/juan-bolivar/suckless_tools.git /home/$2/suckless
+
+
+cd /home/$2 && mkdir scripts   && git clone https://github.com/juan-bolivar/custom_scripts.git /home/$2/scripts  && sudo chown -R  $2:$2 custom_scripts
+cd /home/$2 && mkdir suckless  && git clone https://github.com/juan-bolivar/suckless_tools.git /home/$2/suckless && sudo chown -R  $2:$2 suckless
+
+cd /home/$2 && mkdir yay       && git clone https://aur.archlinux.org/yay.git /home/$2/yay && sudo chown -R  $2:$2 yay
+
 
 cd $HOME                       && git clone https://aur.archlinux.org/transset-df.git
 cd $HOME/transset-df           && makepkg -si
