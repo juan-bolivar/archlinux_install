@@ -46,11 +46,6 @@ ln -sf /usr/share/zoneinfo/America/Bogota /etc/localtime
 echo 'arch' > /etc/hostname
 
 
-#add multilib for checkpointvpn
-echo '[multilib]'                          >> /etc/pacman.conf
-echo 'Include = /etc/pacman.d/mirrorlist'  >> /etc/pacman.conf
-
-
 useradd $2 --create-home  --shell /bin/bash 
 echo "$2:$3"   | chpasswd
 echo "root:$4" | chpasswd
