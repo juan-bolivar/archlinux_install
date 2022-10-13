@@ -14,7 +14,7 @@ pacman -S efibootmgr --noconfirm
 
 mkdir /boot/EFI
 
-mount "$1"1 /boot/EFI
+mount "$1"p1 /boot/EFI
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub_uefi
 
@@ -23,14 +23,13 @@ grub-mkconfig -o /boot/grub/grub.cfg
 mkdir /boot/loader
 mkdir /boot/loader/entries
 
-temp="$1"1
+temp="$1"p1
 echo "
 title Archlinux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
 options root=PARTUUID=$(blkid -s PARTUUID -o value $temp ) rw
 " > /boot/loader/entries/arch.conf
-
 
 
 pacman -S networkmanager --noconfirm
