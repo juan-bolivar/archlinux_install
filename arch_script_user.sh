@@ -1,4 +1,4 @@
-sudo pacman -Sy lib32-pam lib32-libx11  gufw                                      --noconfirm
+sudo pacman -Syu lib32-pam lib32-libx11 gufw git                                  --noconfirm
 sudo pacman -S noto-fonts xorg xfce4 pulseaudio lightdm-gtk-greeter  vi vim       --noconfirm
 sudo pacman -S network-manager-applet git openssh thunderbird firefox pavucontrol --noconfirm
 sudo pacman -S dmenu elinks feh xcompmgr sxhkd acpi newsboat mpv mupdf            --noconfirm
