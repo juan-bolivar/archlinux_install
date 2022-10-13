@@ -44,15 +44,15 @@ echo w
   echo w) | fdisk $dev
 
 #make filesystem
-mkfs.fat -F32 "$dev"1
-mkfs.ext4 "$dev"2
-mkfs.ext4 "$dev"4
+mkfs.fat -F32 "$dev"p1
+mkfs.ext4 "$dev"p2
+mkfs.ext4 "$dev"p4
 
 #make swap
-mkswap "$dev"3
-swapon "$dev"3
+mkswap "$dev"p3
+swapon "$dev"p3
 
-mount "$dev"2 /mnt
+mount "$dev"p2 /mnt
 
 # make file directory
 mkdir /mnt/boot
@@ -60,8 +60,8 @@ mkdir /mnt/home
 
 
 # mount filesystem
-mount "$dev"1 /mnt/boot
-mount "$dev"4 /mnt/home
+mount "$dev"p1 /mnt/boot
+mount "$dev"p4 /mnt/home
 
 
 pacstrap /mnt base base-devel emacs vim linux linux-firmware
