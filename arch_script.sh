@@ -16,7 +16,9 @@ mkdir /boot/EFI
 
 mount "$1"p1 /boot/EFI
 
-grub-install --target=arm64-efi --efi-directory=/boot --bootloader-id=grub_uefi
+grub-install --target=arm64-efi --efi-directory=/boot --bootloader-id=grub_uefi --recheck --no-nvram --removable
+
+update-grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
