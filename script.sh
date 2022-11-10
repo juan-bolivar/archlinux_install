@@ -40,7 +40,7 @@ echo w
 
 ( echo t
   echo 1
-  echo 1
+  echo ef
   echo w) | fdisk $dev
 
 #make filesystem
